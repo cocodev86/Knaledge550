@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "verify:media": "node scripts/verify-media.mjs",
+    "build": "npm run verify:media && next build",
     "start": "next start"
   },
   "dependencies": {
