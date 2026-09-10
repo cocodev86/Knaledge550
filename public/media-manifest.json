@@ -1,0 +1,112 @@
+[
+  {
+    "file": "hero-red-mirror-optimized.mp4",
+    "path": "/public/hero-red-mirror-optimized.mp4",
+    "mediaType": "video/mp4",
+    "use": "Homepage hero background",
+    "consumer": "app/page.js",
+    "bytes": 196647,
+    "sha256": "290a26bd495409339242b9eff870a9867727190642d0f7cdc5abcefcfec596e4",
+    "status": "verified-local"
+  },
+  {
+    "file": "hero-poster.webp",
+    "path": "/public/hero-poster.webp",
+    "mediaType": "image/webp",
+    "use": "Homepage hero poster/fallback",
+    "consumer": "app/page.js",
+    "bytes": 8324,
+    "sha256": "56fa3787616bbe16a8fd738ba901602670ca11de4f911c0a51632230afb55cc8",
+    "status": "verified-local"
+  },
+  {
+    "file": "brick-portrait.webp",
+    "path": "/public/brick-portrait.webp",
+    "mediaType": "image/webp",
+    "use": "Archive portrait, artist story, EPK, OG image",
+    "consumer": "app/page.js; app/epk/page.js; app/layout.js",
+    "bytes": 63938,
+    "sha256": "b333f127df437298df76a223c66bceaa4c79a1872bfb250d871be0601c7422ba",
+    "status": "verified-local"
+  },
+  {
+    "file": "bw-back.webp",
+    "path": "/public/bw-back.webp",
+    "mediaType": "image/webp",
+    "use": "Archive frame 002",
+    "consumer": "app/page.js",
+    "bytes": 14186,
+    "sha256": "9a53af51d4448124894dc6a961b6945f4472a25c263512d6dd112d3990a3ede8",
+    "status": "verified-local"
+  },
+  {
+    "file": "phone-candid.webp",
+    "path": "/public/phone-candid.webp",
+    "mediaType": "image/webp",
+    "use": "Archive frame 003",
+    "consumer": "app/page.js",
+    "bytes": 41494,
+    "sha256": "804b526e57ce186e58d07f62229e770ef60a6f4c8bf3a51b2e5366e1314b132e",
+    "status": "verified-local"
+  },
+  {
+    "file": "driveway-1.webp",
+    "path": "/public/driveway-1.webp",
+    "mediaType": "image/webp",
+    "use": "Archive frame 004A",
+    "consumer": "app/page.js",
+    "bytes": 36732,
+    "sha256": "7855f1e98678566bc1de8405d47ad1856f699afb4dd4a43decaa12f53e867fa9",
+    "status": "verified-local"
+  },
+  {
+    "file": "driveway-2.webp",
+    "path": "/public/driveway-2.webp",
+    "mediaType": "image/webp",
+    "use": "Archive frame 004B",
+    "consumer": "app/page.js",
+    "bytes": 33818,
+    "sha256": "c7fafa968213192c4bde85bcce221abb2b7e1f136bd2e088aa0cd3bfb3ea51d4",
+    "status": "verified-local"
+  },
+  {
+    "file": "bw-poster.webp",
+    "path": "/public/bw-poster.webp",
+    "mediaType": "image/webp",
+    "use": "B&W motion interlude still",
+    "consumer": "app/page.js",
+    "bytes": 4482,
+    "sha256": "2ac06b28cb0b5089be8b37a3c668dde66ee4ae25edde76545b2fad816bb0fcdf",
+    "status": "verified-local"
+  },
+  {
+    "file": "bridge-poster.webp",
+    "path": "/public/bridge-poster.webp",
+    "mediaType": "image/webp",
+    "use": "Archive motion card still",
+    "consumer": "app/page.js",
+    "bytes": 20106,
+    "sha256": "6b2bd0b42996b2118a7331cefcf5151d6089d29d4bf263aae860af4af1bead13",
+    "status": "verified-local"
+  },
+  {
+    "file": "bw-closeup.mp4",
+    "path": "/public/bw-closeup.mp4",
+    "mediaType": "video/mp4",
+    "use": "B&W motion interlude video",
+    "consumer": "app/page.js",
+    "bytes": 138811,
+    "sha256": "20c87c74ce22fecc377659a9550c41d316936c9c2d5c54054a801ffe77f67987",
+    "status": "verified-local"
+  },
+  {
+    "file": "bridge-video.mp4",
+    "path": "/public/bridge-video.mp4",
+    "mediaType": "video/mp4",
+    "use": "Archive motion card video",
+    "consumer": "app/page.js",
+    "bytes": 391250,
+    "sha256": "ca6e1bef568abd4316d6d0a806c4bf1551389818b3009a5a674edc13b78eabf3",
+    "status": "verified-local"
+  }
+]
