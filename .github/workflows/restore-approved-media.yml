@@ -1,0 +1,120 @@
+name: Restore approved production media
+
+on:
+  push:
+    branches:
+      - production-v5
+
+permissions:
+  contents: write
+
+jobs:
+  restore-approved-media:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production candidate
+        uses: actions/checkout@v4
+        with:
+          ref: production-v5
+          fetch-depth: 0
+
+      - name: Ensure media tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Download exact Dropbox replacements
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .asset-src public
+          curl --fail --location --silent --show-error 'https://uc6e8c5520db316ba9856a21f614.dl.dropboxusercontent.com/cd/0/get/DH7slEaZNphkNR1QxjcDthHb8TdEtZVyD-MKujjZ6qoJtEBT9hnkqlQlJCGcwQnq23RfHSHMpNq8IU0rseEDLBC9Zq_IqqEk2yzDEhWzncFzMnyrK0Jv3evYlS5T_D86QrHVDqT7UmgPcdVfY0evakA3iOKpJUpet_VWhDqSCuSlfg/file?c_luid=f1244896' -o .asset-src/IMG_3835.jpeg
+          curl --fail --location --silent --show-error 'https://uccb0a68cc8cd8bd00f8c1b69453.dl.dropboxusercontent.com/cd/0/get/DH4Yu9pw3aDM584v9OZY1ZRCJD12mRD3g_W5jX0ctl6-icLwweuwhNuJ5YgNxouS8WEAFXSrmWHi777NXOmCirQggm7tdG2vi5XBl9TQ-TjHKeru2_P8S896VoWfA7k1v7WFJNxHjIyJD4GD2QXFlCT6dRaW6aV4GvBHWex2nnz8Uw/file?c_luid=f1244896' -o .asset-src/IMG_3834.jpeg
+          curl --fail --location --silent --show-error 'https://uc3701718f9437edb99401ef1772.dl.dropboxusercontent.com/cd/0/get/DH6WExpcNaHs16uAzwrw-q4gMdqsry5HMRLS7uNF2_xIGVcAwIkxj_B8_gJyOdcl05REw8USdfZjLI-lfA03B8TLlWibR8Pk9Im9hPnzCu9P3xtDbDzBp7IA3hBdVPRwxEbSoJ4JXimfxrYZPTJgIk_3-GZ0mC5kT83aLU6yMGiOAw/file?c_luid=f1244896' -o .asset-src/IMG_3833.jpeg
+          curl --fail --location --silent --show-error 'https://ucef3e96849bd4e5b8950d2e7d6a.dl.dropboxusercontent.com/cd/0/get/DH7tMwtAZIFXmqJrUiCU-azVHEVGZvzSvcG3O_9782diwMfs1DyXfBr4pbdNg74wpHM_32YQ4sqNly5SzjN9YaWdGPRvRKUJpZX67ck4lbr14ekUDWUmwNzp5Yh2QsPY5CaT8t3Jqmg85aTLM-0qcdFDvQiOD6a_5sYsFyKlO7QNiw/file?c_luid=f1244896' -o .asset-src/IMG_3832.jpeg
+          curl --fail --location --silent --show-error 'https://ucba1270bc18e98c495afd44e5b8.dl.dropboxusercontent.com/cd/0/get/DH6XcDRtsvWwTLXV_M-9jvEb_Ufp90lVgTiBXeMOUsilw4KYAWVC4YvoSEmqNsjm47xn2awdvcrIDhIPzvzEWXO65dVzosX40V7JL_RSPeZwj-xymG2snrLBcizmm5S-TQsXDp8tCK6HfFzZTQv0yEuwyYP7JbwsdsXLhsI58UNakw/file?c_luid=f1244896' -o .asset-src/IMG_3831.jpeg
+          curl --fail --location --silent --show-error 'https://ucd9da1a927f39c7943665797059.dl.dropboxusercontent.com/cd/0/get/DH7D1pz5yozovhhAdPocYEK3Z9HbghcKl__og6NmirRLWy2DjZy-sflKtE6ZEDeoXawke_mtLrJvgV60fuVPIZ03fdVoq9tH1sl631wXkfBpQZk0LD6hjqSF-PtF9wHKCBVgndHCMVR8q3t-h8MJdkxL9D-62qodZ5M8bb7mUuk7pg/file?c_luid=f1244896' -o .asset-src/hero-source.mp4
+          curl --fail --location --silent --show-error 'https://uc23f50c7428a773eda199ce3597.dl.dropboxusercontent.com/cd/0/get/DH7OEF8jjoLAnhGci9QomfOwd83wtbJgNL4ZK09jYaCGXZAOleeOyMb05iAUq83QP6_r63nfI2BSFW-_4E5opmMUye3nHEOS55DSO9KWB0QmmfLXaeXg33Xn4NhwJkP_6qrkSbF5w8l-SdN4pFPkcpC5dRTYdyH50tbkBvnOSwz1SQ/file?c_luid=f1244896' -o .asset-src/bw-source.mp4
+          curl --fail --location --silent --show-error 'https://uce7dcc171c0548e4b99f4f4d409.dl.dropboxusercontent.com/cd/0/get/DH654Cv6vvcHl5kqocwjsc9CI8VHPOAO3KVFX39FWluzpX7_TC6plFtCfIzQmMD5W5xqyt185hXpSACxzSOn90N-09EFBCjbO5ikMxscyMlZ8_xelGjaDnvdLtVpIR0KNZZk-DlclZRKjqmfNbwsRCf0XvnAKU-2TKxyf2GPUUvasw/file?c_luid=f1244896' -o .asset-src/bridge-source.mp4
+
+          test "$(stat -c%s .asset-src/IMG_3835.jpeg)" -eq 194192
+          test "$(stat -c%s .asset-src/IMG_3834.jpeg)" -eq 220750
+          test "$(stat -c%s .asset-src/IMG_3833.jpeg)" -eq 125082
+          test "$(stat -c%s .asset-src/IMG_3832.jpeg)" -eq 209622
+          test "$(stat -c%s .asset-src/IMG_3831.jpeg)" -eq 350975
+          test "$(stat -c%s .asset-src/hero-source.mp4)" -eq 8740647
+          test "$(stat -c%s .asset-src/bw-source.mp4)" -eq 12015142
+          test "$(stat -c%s .asset-src/bridge-source.mp4)" -eq 13357898
+
+      - name: Build production media set
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffmpeg -y -loglevel error -i .asset-src/IMG_3831.jpeg -c:v libwebp -quality 78 public/brick-portrait.webp
+          ffmpeg -y -loglevel error -i .asset-src/IMG_3833.jpeg -c:v libwebp -quality 78 public/bw-back.webp
+          ffmpeg -y -loglevel error -i .asset-src/IMG_3832.jpeg -c:v libwebp -quality 78 public/phone-candid.webp
+          ffmpeg -y -loglevel error -i .asset-src/IMG_3835.jpeg -c:v libwebp -quality 78 public/driveway-1.webp
+          ffmpeg -y -loglevel error -i .asset-src/IMG_3834.jpeg -c:v libwebp -quality 78 public/driveway-2.webp
+
+          ffmpeg -y -loglevel error -i .asset-src/hero-source.mp4 -vf 'fps=24,scale=512:-2' -c:v libx264 -preset slow -crf 29 -movflags +faststart -c:a aac -b:a 64k public/hero-red-mirror-optimized.mp4
+          ffmpeg -y -loglevel error -i .asset-src/bw-source.mp4 -vf 'fps=24,scale=512:-2' -c:v libx264 -preset slow -crf 30 -movflags +faststart -an public/bw-closeup.mp4
+          ffmpeg -y -loglevel error -i .asset-src/bridge-source.mp4 -vf 'fps=24,scale=512:-2' -c:v libx264 -preset slow -crf 30 -movflags +faststart -an public/bridge-video.mp4
+
+          ffmpeg -y -loglevel error -ss 0.5 -i public/hero-red-mirror-optimized.mp4 -frames:v 1 public/hero-poster.webp
+          ffmpeg -y -loglevel error -ss 0.5 -i public/bw-closeup.mp4 -frames:v 1 public/bw-poster.webp
+          ffmpeg -y -loglevel error -ss 0.5 -i public/bridge-video.mp4 -frames:v 1 public/bridge-poster.webp
+
+      - name: Regenerate authoritative media manifest
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          items = [
+            ('hero-red-mirror-optimized.mp4','video/mp4','Homepage hero background','app/page.js'),
+            ('hero-poster.webp','image/webp','Homepage hero poster/fallback','app/page.js'),
+            ('brick-portrait.webp','image/webp','Archive portrait, artist story, EPK, OG image','app/page.js; app/epk/page.js; app/layout.js; app/releases/[slug]/page.js'),
+            ('bw-back.webp','image/webp','Archive frame 002','app/page.js'),
+            ('phone-candid.webp','image/webp','Archive frame 003','app/page.js'),
+            ('driveway-1.webp','image/webp','Archive frame 004A','app/page.js'),
+            ('driveway-2.webp','image/webp','Archive frame 004B','app/page.js'),
+            ('bw-poster.webp','image/webp','B&W motion interlude still','app/page.js'),
+            ('bridge-poster.webp','image/webp','Archive motion card still','app/page.js'),
+            ('bw-closeup.mp4','video/mp4','B&W motion interlude video','app/page.js'),
+            ('bridge-video.mp4','video/mp4','Archive motion card video','app/page.js'),
+          ]
+          manifest=[]
+          for name, media_type, use, consumer in items:
+              p=Path('public')/name
+              data=p.read_bytes()
+              manifest.append({
+                  'file': name,
+                  'path': f'/public/{name}',
+                  'mediaType': media_type,
+                  'use': use,
+                  'consumer': consumer,
+                  'bytes': len(data),
+                  'sha256': hashlib.sha256(data).hexdigest(),
+                  'status': 'verified-replacement-2026-09-10'
+              })
+          Path('public/media-manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
+          PY
+
+      - name: Run media integrity gate
+        run: node scripts/verify-media.mjs
+
+      - name: Commit approved replacements
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'knaledge550-build-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add public/media-manifest.json \
+            public/brick-portrait.webp public/bw-back.webp public/phone-candid.webp \
+            public/driveway-1.webp public/driveway-2.webp \
+            public/hero-red-mirror-optimized.mp4 public/hero-poster.webp \
+            public/bw-closeup.mp4 public/bw-poster.webp \
+            public/bridge-video.mp4 public/bridge-poster.webp
+          git commit -m 'Install approved Knaledge550 replacement media [skip ci]'
+          git push origin HEAD:production-v5
