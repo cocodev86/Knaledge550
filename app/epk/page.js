@@ -1,4 +1,27 @@
 import Link from "next/link";
-import { APPLE_MUSIC, INSTAGRAM } from "../../lib/site";
-export const metadata = { title: "EPK", description: "KNALEDGE550 electronic press kit.", alternates: { canonical: "/epk" } };
-export default function EPKPage() { return <main className="epkPage"><header className="releaseNav"><Link href="/">← KNALEDGE550</Link><span>EPK / PRESS KIT</span></header><section className="epkHero"><img src="/brick-portrait.jpeg" alt="KNALEDGE550"/><div><span className="sectionIndex">OFFICIAL PRESS KIT</span><h1>KNALEDGE550</h1><p>Music artist press hub for bio, photos, music links, press materials and business inquiries.</p><div className="releaseHeroButtons"><a className="btn btnSolid" href={APPLE_MUSIC} target="_blank">APPLE MUSIC ↗</a><a className="btn btnLine" href={INSTAGRAM} target="_blank">INSTAGRAM ↗</a></div></div></section><section className="epkBlocks"><article><span>BIO</span><h2>ARTIST STORY</h2><p>Final approved long-form bio will be inserted here.</p></article><article><span>PHOTOS</span><h2>PRESS IMAGES</h2><p>Approved high-resolution artist images from the 550 Archive.</p></article><article><span>MUSIC</span><h2>LISTEN</h2><p>Apple Music remains the primary official streaming destination.</p></article><article><span>CONTACT</span><h2>BUSINESS</h2><p>Booking, press, features and business contact details will be added before launch.</p></article></section></main>; }
+import { APPLE_MUSIC, AUDIOMACK, INSTAGRAM, SITE_URL } from "../../lib/site";
+
+export const metadata = {
+  title: "EPK",
+  description: "Official KNALEDGE550 electronic press kit with music, selected images and verified artist links.",
+  alternates: { canonical: "/epk" },
+  openGraph: { title: "KNALEDGE550 — Official EPK", description: "Official music, selected images and verified artist links.", url: `${SITE_URL}/epk`, images: ["/brick-portrait.webp"] },
+};
+
+export default function EPKPage() {
+  return (
+    <main className="epkPage">
+      <header className="releaseNav"><Link href="/">← KNALEDGE550</Link><span>OFFICIAL EPK</span></header>
+      <section className="epkHero">
+        <img src="/brick-portrait.webp" width="900" height="1058" alt="Artist portrait against a weathered brick wall" />
+        <div><span className="sectionIndex">ELECTRONIC PRESS KIT</span><h1>KNALEDGE550</h1><p>Official music, selected artist images, release pages and verified external destinations.</p><div className="releaseHeroButtons"><a className="btn btnSolid" href={APPLE_MUSIC} target="_blank" rel="noreferrer">APPLE MUSIC ↗</a><a className="btn btnLine" href={INSTAGRAM} target="_blank" rel="noreferrer">INSTAGRAM ↗</a></div></div>
+      </section>
+      <section className="epkBlocks" aria-label="EPK resources">
+        <article><span>MUSIC</span><h2>LISTEN</h2><p>Go directly to the primary streaming destination.</p><a className="textLink" href={APPLE_MUSIC} target="_blank" rel="noreferrer">OPEN APPLE MUSIC ↗</a></article>
+        <article><span>RELEASES</span><h2>CATALOG</h2><p>Open the official release archive and individual release pages.</p><Link className="textLink" href="/#music">VIEW RELEASES →</Link></article>
+        <article><span>PHOTOS</span><h2>SELECTED IMAGES</h2><p>View approved imagery from the 550 Archive.</p><Link className="textLink" href="/#archive">VIEW ARCHIVE →</Link></article>
+        <article><span>OFFICIAL LINKS</span><h2>CONNECT</h2><div className="epkLinkStack"><a href={APPLE_MUSIC} target="_blank" rel="noreferrer">APPLE MUSIC ↗</a><a href={INSTAGRAM} target="_blank" rel="noreferrer">INSTAGRAM ↗</a><a href={AUDIOMACK} target="_blank" rel="noreferrer">AUDIOMACK ↗</a></div></article>
+      </section>
+    </main>
+  );
+}
