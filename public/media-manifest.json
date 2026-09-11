@@ -5,9 +5,9 @@
     "mediaType": "video/mp4",
     "use": "Homepage hero background",
     "consumer": "app/page.js",
-    "bytes": 196647,
-    "sha256": "290a26bd495409339242b9eff870a9867727190642d0f7cdc5abcefcfec596e4",
-    "status": "verified-local"
+    "bytes": 796345,
+    "sha256": "f174c15953cf8342a9b49593f2d2bc2b938058af941a99306374f66de404613e",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "hero-poster.webp",
@@ -15,19 +15,19 @@
     "mediaType": "image/webp",
     "use": "Homepage hero poster/fallback",
     "consumer": "app/page.js",
-    "bytes": 8324,
-    "sha256": "56fa3787616bbe16a8fd738ba901602670ca11de4f911c0a51632230afb55cc8",
-    "status": "verified-local"
+    "bytes": 5972,
+    "sha256": "797715476d51883bb8eb8dfc4b44bad97a88135c9de17e193d7fb14cbd8a010c",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "brick-portrait.webp",
     "path": "/public/brick-portrait.webp",
     "mediaType": "image/webp",
     "use": "Archive portrait, artist story, EPK, OG image",
-    "consumer": "app/page.js; app/epk/page.js; app/layout.js",
-    "bytes": 63938,
-    "sha256": "b333f127df437298df76a223c66bceaa4c79a1872bfb250d871be0601c7422ba",
-    "status": "verified-local"
+    "consumer": "app/page.js; app/epk/page.js; app/layout.js; app/releases/[slug]/page.js",
+    "bytes": 165920,
+    "sha256": "bc8d86ca8706c03d2060004d1beadc402ed669c9b3e97dec9424296dd65b0488",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "bw-back.webp",
@@ -35,9 +35,9 @@
     "mediaType": "image/webp",
     "use": "Archive frame 002",
     "consumer": "app/page.js",
-    "bytes": 14186,
-    "sha256": "9a53af51d4448124894dc6a961b6945f4472a25c263512d6dd112d3990a3ede8",
-    "status": "verified-local"
+    "bytes": 29530,
+    "sha256": "4bb005df72be913960fdb0278ff9db28ba22ded195b2d921dd853f58d15c50a3",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "phone-candid.webp",
@@ -45,9 +45,9 @@
     "mediaType": "image/webp",
     "use": "Archive frame 003",
     "consumer": "app/page.js",
-    "bytes": 41494,
-    "sha256": "804b526e57ce186e58d07f62229e770ef60a6f4c8bf3a51b2e5366e1314b132e",
-    "status": "verified-local"
+    "bytes": 79460,
+    "sha256": "d3b9929a97e0eda290a0602114d06e72a261cad17f7290fc4ae2b4a0d566b261",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "driveway-1.webp",
@@ -55,9 +55,9 @@
     "mediaType": "image/webp",
     "use": "Archive frame 004A",
     "consumer": "app/page.js",
-    "bytes": 36732,
-    "sha256": "7855f1e98678566bc1de8405d47ad1856f699afb4dd4a43decaa12f53e867fa9",
-    "status": "verified-local"
+    "bytes": 73610,
+    "sha256": "69b4386d5cbc13d34d9cc35f81e4857128b901a91dd5f59e52f0c9ddbdf44dc4",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "driveway-2.webp",
@@ -65,9 +65,9 @@
     "mediaType": "image/webp",
     "use": "Archive frame 004B",
     "consumer": "app/page.js",
-    "bytes": 33818,
-    "sha256": "c7fafa968213192c4bde85bcce221abb2b7e1f136bd2e088aa0cd3bfb3ea51d4",
-    "status": "verified-local"
+    "bytes": 82360,
+    "sha256": "0a8396b945dc5386333644458398ed52d401ef4eadc0ef80cec070e878723775",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "bw-poster.webp",
@@ -75,9 +75,9 @@
     "mediaType": "image/webp",
     "use": "B&W motion interlude still",
     "consumer": "app/page.js",
-    "bytes": 4482,
-    "sha256": "2ac06b28cb0b5089be8b37a3c668dde66ee4ae25edde76545b2fad816bb0fcdf",
-    "status": "verified-local"
+    "bytes": 4838,
+    "sha256": "cd69c8ebe6fbfae3cf25c94c3152bc253735aec90f44f4e324aa97e869d4663a",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "bridge-poster.webp",
@@ -85,9 +85,9 @@
     "mediaType": "image/webp",
     "use": "Archive motion card still",
     "consumer": "app/page.js",
-    "bytes": 20106,
-    "sha256": "6b2bd0b42996b2118a7331cefcf5151d6089d29d4bf263aae860af4af1bead13",
-    "status": "verified-local"
+    "bytes": 27586,
+    "sha256": "f1367b5da9398549c8d0be3a281a301f6866a755dd785bbd7ab025c74569a0de",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "bw-closeup.mp4",
@@ -95,9 +95,9 @@
     "mediaType": "video/mp4",
     "use": "B&W motion interlude video",
     "consumer": "app/page.js",
-    "bytes": 138811,
-    "sha256": "20c87c74ce22fecc377659a9550c41d316936c9c2d5c54054a801ffe77f67987",
-    "status": "verified-local"
+    "bytes": 677280,
+    "sha256": "096994d11fa42cb8af85db6af53e0f2e8695a228908d3d4d12e6100c712bf2fc",
+    "status": "verified-replacement-2026-09-10"
   },
   {
     "file": "bridge-video.mp4",
@@ -105,8 +105,8 @@
     "mediaType": "video/mp4",
     "use": "Archive motion card video",
     "consumer": "app/page.js",
-    "bytes": 391250,
-    "sha256": "ca6e1bef568abd4316d6d0a806c4bf1551389818b3009a5a674edc13b78eabf3",
-    "status": "verified-local"
+    "bytes": 1335570,
+    "sha256": "b96c5904f0d86f38c678466c56b4c8e4db4279dce03d6864188d3ecc8720bff3",
+    "status": "verified-replacement-2026-09-10"
   }
 ]
